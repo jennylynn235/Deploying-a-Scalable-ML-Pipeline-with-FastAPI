@@ -22,12 +22,14 @@ The dataset was randomly split into training and testing subsets using an 80/20 
 
 ## Metrics
 
-Model performance was evaluated using Precision, Recall, and F1 Score to assess the classifier's predictive performance on the held-out test dataset."
+Model performance was evaluated using Precision, Recall, and F1 Score to assess the classifier's predictive performance on the held-out test dataset.
 
 **Overall model performance**
 - Precision: 0.7419
 - Recall: 0.6384
 - F1 Score: 0.6863
+
+These results indicate that the model achieves a reasonable balance between precision and recall for this educational classification task, while still leaving room for improvement through additional feature engineering and hyperparameter tuning.
 
 In addition to overall performance, slice-based metrics were generated for every categorical feature value to identify differences in model performance across demographic and employment-related groups.
 
