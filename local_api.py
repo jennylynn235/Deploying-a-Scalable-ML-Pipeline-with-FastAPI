@@ -2,13 +2,13 @@ import json
 
 import requests
 
-# TODO: send a GET using the URL http://127.0.0.1:8000
-r = None # Your code here
+# Send a GET request to verify that the API is running.
+r = requests.get("http://127.0.0.1:8000")
 
-# TODO: print the status code
-# print()
-# TODO: print the welcome message
-# print()
+# Display the HTTP status code returned by the API.
+print(f"Status Code: {r.status_code}")
+# Display the welcome message returned from the API.
+print(f"Result: {r.json()['message']}")
 
 
 
@@ -29,10 +29,12 @@ data = {
     "native-country": "United-States",
 }
 
-# TODO: send a POST using the data above
-r = None # Your code here
-
-# TODO: print the status code
-# print()
-# TODO: print the result
-# print()
+# Send a POST request containing Census Income data for prediction.
+r = requests.post(
+    "http://127.0.0.1:8000/data/",
+    json=data,
+)
+# Display the HTTP status code returned by the prediction request.
+print(f"Status Code: {r.status_code}")
+# Display the predicted income classification.
+print(f"Result: {r.json()['result']}")
